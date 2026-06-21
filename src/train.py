@@ -3,7 +3,7 @@ import os
 
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
-from preprocess import preprocess_data
+from src.preprocess import preprocess_data
 
 def train():
 
