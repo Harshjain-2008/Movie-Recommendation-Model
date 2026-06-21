@@ -1,5 +1,10 @@
 import joblib
 import streamlit as st
+import os
+
+if not os.path.exists("models/movie_list.pkl"):
+    from src.train import train
+    train()
 
 from src.recommender import recommend
 from src.utlis import fetch_movie_details

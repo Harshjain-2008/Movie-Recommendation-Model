@@ -1,4 +1,5 @@
 import joblib
+import os
 
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
@@ -14,7 +15,10 @@ def train():
 
     similarity = cosine_similarity(vectors)
 
-    # save model files 
+    # save model files
+    
+
+    os.makedirs("models", exist_ok=True) 
 
     joblib.dump(movies,"models/movies_list.pkl")
     joblib.dump(similarity,"models/similarity.pkl")
